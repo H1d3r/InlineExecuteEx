@@ -4,7 +4,7 @@
 #include "../sleepmask.h"
 
 namespace bof {
-    const DWORD CsVersion = 0x041000;
+    const DWORD CsVersion = 0x041200;
 
     namespace profile {
         /**

@@ -7,6 +7,7 @@ typedef struct API_TABLE {
     DWORD version;
     PVOID BeaconAddValue;
     PVOID BeaconCleanupProcess;
+    PVOID BeaconDownload;
     PVOID BeaconCloseHandle;
     PVOID BeaconDataExtract;
     PVOID BeaconDataLength;

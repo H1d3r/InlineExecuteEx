@@ -137,6 +137,7 @@ BOOL InitInternalFunctionsDynamic(void) {
 	// Output / token / proc stuff
 	ADD("BeaconOutput", BeaconOutput);
 	ADD("BeaconPrintf", BeaconPrintf);
+	ADD("BeaconDownload", BeaconDownload);
 	ADD("BeaconUseToken", BeaconUseToken);
 	ADD("BeaconRevertToken", BeaconRevertToken);
 	ADD("BeaconIsAdmin", BeaconIsAdmin);
@@ -248,6 +249,7 @@ BOOL BuildApiTable(PAPI_TABLE apiTable) {
     apiTable->version                        = API_TABLE_VERSION;
     apiTable->BeaconAddValue                 = (PVOID)BeaconAddValue;
     apiTable->BeaconCleanupProcess           = (PVOID)BeaconCleanupProcess;
+	apiTable->BeaconDownload                 = (PVOID)BeaconDownload;
     apiTable->BeaconCloseHandle              = (PVOID)BeaconCloseHandle;
     apiTable->BeaconDataExtract              = (PVOID)BeaconDataExtract;
     apiTable->BeaconDataLength               = (PVOID)BeaconDataLength;
@@ -313,6 +315,7 @@ BOOL BuildApiTable(PAPI_TABLE apiTable) {
     CHECK_API_FIELD(apiTable->version);
     CHECK_API_FIELD(apiTable->BeaconAddValue);
     CHECK_API_FIELD(apiTable->BeaconCleanupProcess);
+	CHECK_API_FIELD(apiTable->BeaconDownload);
     CHECK_API_FIELD(apiTable->BeaconCloseHandle);
     CHECK_API_FIELD(apiTable->BeaconDataExtract);
     CHECK_API_FIELD(apiTable->BeaconDataLength);

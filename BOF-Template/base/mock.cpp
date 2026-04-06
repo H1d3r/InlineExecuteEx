@@ -435,6 +435,20 @@ extern "C"
         printf("[Output Callback: %s (0x%X)]\n%.*s", bof::utils::typeToStr(type), type, len, data);
     }
 
+    BOOL BeaconDownload(const char* filename, const char* buffer, unsigned int length) {
+        if (filename == NULL || buffer == NULL || length == 0) {
+            return FALSE;
+        }
+
+        std::string message = "[Download] ";
+        message += filename;
+        message += " (";
+        message += std::to_string(length);
+        message += " bytes)";
+        bof::output::addEntry(CALLBACK_OUTPUT, message.c_str(), static_cast<int>(message.size()));
+        return TRUE;
+    }
+
     // Parser API
     void BeaconDataParse(datap *parser, char *buffer, int size) {
         parser->buffer = buffer;

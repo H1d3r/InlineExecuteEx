@@ -86,6 +86,7 @@ list_of_implant_functions_cs = [
     "BeaconFormatInt",
     "BeaconOutput",
     "BeaconPrintf",
+    "BeaconDownload",
     "BeaconUseToken",
     "BeaconRevertToken",
     "BeaconIsAdmin",
